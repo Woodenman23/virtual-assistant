@@ -1,5 +1,14 @@
-def main():
-    print("Hello, Poetry!")
+import typer
 
-if __name__ == "__main__":
-    main()
+app = typer.Typer()
+
+@app.command()
+def hello(name: str):
+    print(f"Hello {name}")
+
+@app.command()
+def goodbye():
+    print("Goodbye")
+
+def main():
+    app()
