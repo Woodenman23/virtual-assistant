@@ -1,9 +1,9 @@
 import requests
 import yaml
 
-def get_city_json(city: str):
+def get_city_json(city: str, temp_scale: str = "metric"):
     city_data = requests.get(
-        f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&APPID={api_key()}"
+        f"https://api.openweathermap.org/data/2.5/weather?q={city}&units={temp_scale}&APPID={api_key()}"
     )
     return city_data.json()
 

@@ -18,7 +18,7 @@ def get_time(city: str) -> None:
         now_utc = datetime.now(timezone.utc)
         city_datetime = now_utc.astimezone(time_zone)
     city_current_time = city_datetime.strftime("%H:%M:%S")
-    print(f"The time in {city.capitalize()} is {city_current_time}.")
+    print(f"The time in {city.title()} is {city_current_time}.")
 
 def get_time_zone(city: str) -> str:
     with open("assistant/data/cities.json", "r") as file:
