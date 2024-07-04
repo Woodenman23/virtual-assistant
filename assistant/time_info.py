@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta, timezone
 import pytz
 import json
+from rich import print
+
 
 from assistant import get_city_json
 

@@ -1,4 +1,6 @@
 import wikipedia
+from rich import print
+
 
 def wiki_search(search_term: str):
     search_term = format_as_title(search_term)
