@@ -3,8 +3,7 @@ import pytz
 import json
 from rich import print
 
-
-from assistant import get_city_json
+from assistant import get_city_json, ASSITANT_PATH
 
 def get_time(city: str) -> None:
     
@@ -23,7 +22,7 @@ def get_time(city: str) -> None:
     print(f"The time in {city.title()} is {city_current_time}.")
 
 def get_time_zone(city: str) -> str:
-    with open("assistant/data/cities.json", "r") as file:
+    with open(ASSITANT_PATH / "data/cities.json", "r") as file:
         time_zones = json.load(file)
-        return time_zones[city.lower()]
+        return time_zones[city.lower()] 
             
